@@ -10,6 +10,7 @@ import RealityKit
 import SwiftUI
 import os
 
+#if !targetEnvironment(simulator)
 @MainActor
 @available(iOS 17.0, *)
 class AppDataModel: ObservableObject, Identifiable {
@@ -368,3 +369,4 @@ extension AppDataModel {
         )
     }
 }
+#endif

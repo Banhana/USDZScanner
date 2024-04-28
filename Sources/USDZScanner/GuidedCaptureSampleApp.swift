@@ -8,6 +8,6 @@ Top-level app structure of the view hierarchy.
 import SwiftUI
 
 struct GuidedCaptureSampleApp{
-    static let subsystem: String = "com.alfianlosari.GuidedCapture"
+    static let subsystem: String = "com.Banhana.GuidedCapture"
 }
  

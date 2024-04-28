@@ -10,6 +10,7 @@ import Dispatch
 import Foundation
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 /// Adds a message to a queue that appears with a minimum duration.
 ///
 /// The duration extends if the queue refreshes and automatically removes items for which the timer is expired.
@@ -142,3 +143,4 @@ class TimedMessageList: ObservableObject {
         setTimer()
     }
 }
+#endif

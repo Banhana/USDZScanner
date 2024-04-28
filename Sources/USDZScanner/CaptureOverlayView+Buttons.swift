@@ -10,6 +10,7 @@ import RealityKit
 import UniformTypeIdentifiers
 import os
 
+#if !targetEnvironment(simulator)
 extension CaptureOverlayView {
     static let logger = Logger(subsystem: GuidedCaptureSampleApp.subsystem,
                                category: "CaptureOverlayView+Buttons")
@@ -261,3 +262,4 @@ extension CaptureOverlayView {
         func updateUIView(_ uiView: UIVisualEffectView, context: UIViewRepresentableContext<Self>) { uiView.effect = effect }
     }
 }
+#endif

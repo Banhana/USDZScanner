@@ -7,6 +7,7 @@ Device orbit component of a data model that maintains the state of the app.
 
 import UIKit
 
+#if !targetEnvironment(simulator)
 extension AppDataModel {
     enum Orbit: Int, CaseIterable, Identifiable, Comparable {
         case orbit1, orbit2, orbit3
@@ -78,3 +79,4 @@ extension AppDataModel {
         case initial, capturing
     }
 }
+#endif

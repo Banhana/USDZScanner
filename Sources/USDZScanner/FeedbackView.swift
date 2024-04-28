@@ -9,6 +9,7 @@ import Foundation
 import RealityKit
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 struct FeedbackView: View {
     @ObservedObject var messageList: TimedMessageList
 
@@ -25,3 +26,4 @@ struct FeedbackView: View {
         }
     }
 }
+#endif

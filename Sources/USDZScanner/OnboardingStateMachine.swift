@@ -8,6 +8,7 @@ The state machine this sample uses to transition between the review screens, pla
 import Foundation
 import os
 
+#if !targetEnvironment(simulator)
 /// The state machine used by `OnboardingView` to show the tutorial and texts
 /// depending on its `currentState`.
 /// The state transitions happen based on the user inputs in `OnboardingButtonView`.
@@ -151,3 +152,4 @@ enum OnboardingUserInput: Equatable {
     case objectCannotBeFlipped
     case flipObjectAnyway
 }
+#endif

@@ -9,6 +9,7 @@ import RealityKit
 import SwiftUI
 import os
 
+#if !targetEnvironment(simulator)
 @available(iOS 17.0, *)
 /// The root of the SwiftUI view graph.
 public struct USDZScanner: View {
@@ -91,4 +92,5 @@ struct USDZScanner_Previews: PreviewProvider {
         USDZScanner() { url in }
     }
 }
+#endif
 #endif

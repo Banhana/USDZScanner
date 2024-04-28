@@ -9,6 +9,7 @@ import Foundation
 import RealityKit
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 @available(iOS 17.0, *)
 struct CapturePrimaryView: View {
     @EnvironmentObject var appModel: AppDataModel
@@ -90,3 +91,4 @@ private struct GradientBackground: View {
         .allowsHitTesting(false)
     }
 }
+#endif

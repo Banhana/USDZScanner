@@ -7,6 +7,7 @@ The view that plays the tutorial.
 
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 struct TutorialVideoView: View {
     @EnvironmentObject var appModel: AppDataModel
     let url: URL
@@ -54,3 +55,4 @@ struct TutorialVideoView: View {
         }
     }
 }
+#endif

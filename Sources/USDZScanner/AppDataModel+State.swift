@@ -7,6 +7,7 @@ State enumeration for the data model type that maintains the state of the app.
 
 import Foundation
 
+#if !targetEnvironment(simulator)
 extension AppDataModel {
     enum ModelState: String, CustomStringConvertible {
         var description: String { rawValue }
@@ -22,3 +23,4 @@ extension AppDataModel {
         case failed
     }
 }
+#endif

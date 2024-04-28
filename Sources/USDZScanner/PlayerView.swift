@@ -8,6 +8,7 @@ The view that plays the input video.
 import AVKit
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 struct PlayerView: UIViewRepresentable {
 
     /// The location of a video asset.
@@ -113,3 +114,4 @@ class AVPlayerView: UIView {
         set { playerLayer.player = newValue }
     }
 }
+#endif
