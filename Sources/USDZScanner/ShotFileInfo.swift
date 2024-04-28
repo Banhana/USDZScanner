@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+#if !targetEnvironment(simulator)
 struct ShotFileInfo {
     let fileURL: URL
     let id: UInt32
@@ -25,3 +26,4 @@ struct ShotFileInfo {
 }
 
 extension ShotFileInfo: Identifiable { }
+#endif

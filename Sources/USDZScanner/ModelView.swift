@@ -12,6 +12,7 @@ import SwiftUI
 import UIKit
 import os
 
+#if !targetEnvironment(simulator)
 struct ModelView: View {
     let modelFile: URL
     let endCaptureCallback: () -> Void
@@ -75,3 +76,4 @@ private class QLPreviewControllerWrapper: UIViewController {
         }
     }
 }
+#endif

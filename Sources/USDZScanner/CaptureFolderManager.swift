@@ -9,6 +9,7 @@ import Dispatch
 import Foundation
 import os
 
+#if !targetEnvironment(simulator)
 class CaptureFolderManager: ObservableObject {
     static let logger = Logger(subsystem: GuidedCaptureSampleApp.subsystem,
                                 category: "CaptureFolderManager")
@@ -211,3 +212,4 @@ class CaptureFolderManager: ObservableObject {
         return documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
     }
 }
+#endif

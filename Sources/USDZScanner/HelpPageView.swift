@@ -7,6 +7,7 @@ Custom SwiftUI View for showing the tutorial stack.
 
 import SwiftUI
 
+#if !targetEnvironment(simulator)
 /// Top-level view containing a tabbed view of each of the help pages.
 struct HelpPageView: View {
     @Binding var showInfo: Bool
@@ -214,3 +215,4 @@ struct HelpPageView_Previews: PreviewProvider {
     }
 }
 #endif // DEBUG
+#endif
