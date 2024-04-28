@@ -13,7 +13,7 @@ This is just a SPM wrapper based on the original [Apple Object Capture Sample Co
 
 ### Swift Package Manager
 - File > Swift Packages > Add Package Dependency
-- Add https://github.com/alfianlosari/USDZScanner.git
+- Add https://github.com/Banhana/USDZScanner.git
 
 You must add `Privacy - Camera Usage Description` permission in your App Info.plist to use the scanner.  
 
